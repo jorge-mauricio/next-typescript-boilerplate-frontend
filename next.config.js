@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: true, // may cause double rendering
 
   // Optional: Add other commonly used options
   poweredByHeader: false,
