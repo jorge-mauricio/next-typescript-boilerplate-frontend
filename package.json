@@ -1,0 +1,54 @@
+{
+  "name": "syncsystem-multiplatform-v2-react-next-ts",
+  "version": "0.0.1",
+  "description": "React Next TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint \"**/*.{ts,tsx}\"",
+    "lint:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "lint:file": "eslint --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:file": "prettier --write",
+    "lint:format": "npm run lint:fix && npm run format",
+    "lint:format:file": "npm run lint:file && npm run format:file"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorge-mauricio/syncsystem-multiplatform-v2.git"
+  },
+  "author": "Jorge Mauricio - Full Stack Web Developer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorge-mauricio/syncsystem-multiplatform-v2/issues"
+  },
+  "homepage": "https://github.com/jorge-mauricio/syncsystem-multiplatform-v2#readme",
+  "dependencies": {
+    "next": "^15.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.13",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-next": "^15.0.3",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  }
+}
