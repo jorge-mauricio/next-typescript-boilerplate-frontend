@@ -2,6 +2,71 @@
 
 ## Development
 
+### Development Server
+
+#### Available Scripts
+
+In the project directory, you can run:
+
+```bash
+# Start development server
+npm run dev
+```
+- Starts the development server on `http://localhost:3000`
+- Page auto-updates as you edit files
+- Shows detailed error messages in your browser
+
+```bash
+# Build for production
+npm run build
+```
+- Creates an optimized production build in `.next` folder
+- Includes automatic bundle optimization
+- Generates static HTML for supported pages
+
+```bash
+# Start production server
+npm run start
+```
+- Runs the built app in production mode
+- Must run `build` first
+- Used to test production deployment
+
+#### Development Mode Features
+- Hot Module Replacement (HMR)
+- Fast Refresh for React components
+- Error reporting overlay
+- Source maps for debugging
+- TypeScript type checking
+- ESLint error checking
+- Tailwind CSS class autocompletion
+
+#### Available URLs
+- Main: [http://localhost:3000](http://localhost:3000)
+- Development server typically runs on port 3000, but will automatically find another port if 3000 is in use
+
+#### Environment Configuration
+Development server can be configured using environment variables:
+```bash
+# In .env.local
+PORT=3005          # Change development server port
+NODE_ENV=development
+```
+
+#### Troubleshooting Common Issues
+1. **Port already in use**
+   - Server will automatically try the next available port
+   - Or manually change port in `.env.local`
+
+2. **Changes not reflecting**
+   - Ensure you've saved all files
+   - Try clearing `.next` cache: `rm -rf .next`
+   - Restart development server
+
+3. **TypeScript/ESLint errors**
+   - Fix reported issues before building
+   - Use `npm run lint:fix` to auto-fix when possible
+  
 ### Linting and Code Style Guide
 
 #### Setup Overview
