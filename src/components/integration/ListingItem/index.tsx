@@ -1,5 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
+import { formatCurrency } from '@/lib/helpers/formatters';
 import { toTitleCase } from '@/lib/helpers/strings';
 import { Listing } from '@/types/listing';
 
@@ -17,17 +19,6 @@ interface ListingCardProps {
  * @returns {JSX.Element}
  */
 const ListingItem = ({ listing }: ListingCardProps): JSX.Element => {
-  // NOTE: Prototype shortcut - I could have created a helper for this.
-  const formattedPrice = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  })
-    .format(listing['Sale Price'])
-    .replace(/,/g, ' ')
-    .replace('$', '$ ');
-
   return (
     <div className={styles['listing-item']}>
       <Image
@@ -42,13 +33,15 @@ const ListingItem = ({ listing }: ListingCardProps): JSX.Element => {
       <p className={`${styles['listing-item-content']} text-sm`}>
         {listing.Bedrooms} beds | {listing.Bathrooms} baths
       </p>
-      <p className={`${styles['listing-item-content']} font-bold text-lg mb-2`}>{formattedPrice}</p>
-      <button
-        className="w-[calc(100%-1rem)] bg-sky-400 text-black py-2 px-4 rounded hover:bg-orange-600 transition-colors mt-auto mx-auto"
-        type="button"
+      <p className={`${styles['listing-item-content']} font-bold text-lg mb-2`}>
+        {formatCurrency(listing['Sale Price'])}
+      </p>
+      <Link
+        href={`/listings/${listing.Id}`}
+        className="w-[calc(100%-1rem)] bg-sky-400 text-center text-black py-2 px-4 rounded hover:bg-orange-600 transition-colors mt-auto mx-auto"
       >
         View Details
-      </button>
+      </Link>
     </div>
   );
 };
