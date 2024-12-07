@@ -1,35 +1,24 @@
+import ListingItem from '@/components/integration/ListingItem';
 import FrontendMain from '@/components/layout/FrontendMain';
+import { API_CONFIG } from '@/config';
+import { Listing, ListingsProps } from '@/types/listing';
 
 // import styles from './styles.module.scss';
 
 import type { NextPage } from 'next';
-
-interface Listing {
-  id: number; // Example type, adjust based on the shape of your data
-  title: string;
-  location: string;
-  bedrooms: number;
-  bathrooms: number;
-  price: number;
-}
-
-interface ListingsProps {
-  listings: Listing[];
-}
 
 const Listings: NextPage<ListingsProps> = ({ listings }) => {
   // Debug.
   console.log('listings=', listings); // prints in the browser
   return (
     <FrontendMain cphTitleMain="Listings">
-      {/* <div className={styles['l-listings-container']}>
-        <main className={styles['listings-content']}>
-          <div className={styles['listings-content-header']}>
-            <h1>Property Listings</h1>
-          </div>
-        </main>
-      </div> */}
-      Listing content
+      <div>Filters</div>
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> */}
+      <div className="flex flex-wrap justify-evenly gap-6">
+        {listings.map(listing => (
+          <ListingItem key={listing.Id} listing={listing} />
+        ))}
+      </div>
     </FrontendMain>
   );
 };
@@ -37,7 +26,7 @@ const Listings: NextPage<ListingsProps> = ({ listings }) => {
 export const getServerSideProps = async () => {
   // Fetch data on the server side
   try {
-    const response = await fetch('http://localhost:3001/listings');
+    const response = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.LISTINGS.GET_ALL}`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

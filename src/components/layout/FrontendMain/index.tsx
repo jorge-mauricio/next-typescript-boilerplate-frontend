@@ -45,8 +45,10 @@ const FrontendMain = ({ cphTitleMain, children }: FrontendMainProps): JSX.Elemen
       </header>
 
       <main className={styles['l-frontend-main-content']}>
-        <h1 className={styles['l-frontend-main-content-heading']}>{cphTitleMain}</h1>
-        {children}
+        <div className="max-w-[75rem] m-auto">
+          <h1 className={styles['l-frontend-main-content-heading']}>{cphTitleMain}</h1>
+          {children}
+        </div>
       </main>
 
       <footer className={styles['l-frontend-main-footer']}>
