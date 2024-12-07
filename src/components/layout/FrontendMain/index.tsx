@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -20,6 +21,15 @@ const FrontendMain = ({ cphTitleMain, children }: FrontendMainProps): JSX.Elemen
 
   return (
     <>
+      <Head>
+        {/*
+        NOTE: prototype shortcut - ideally, I would create a different prop for this,
+        as the documents title can be different from the layout title.
+        */}
+        <title>
+          {typeof cphTitleMain === 'string' ? `${cphTitleMain} - Real Estate` : 'Real Estate'}
+        </title>
+      </Head>
       <header className={styles['l-frontend-main-header']}>
         <Image
           className="mx-auto min-w-64"
@@ -45,8 +55,10 @@ const FrontendMain = ({ cphTitleMain, children }: FrontendMainProps): JSX.Elemen
       </header>
 
       <main className={styles['l-frontend-main-content']}>
-        <h1 className={styles['l-frontend-main-content-heading']}>{cphTitleMain}</h1>
-        {children}
+        <div className="max-w-[64rem] m-auto">
+          <h1 className={styles['l-frontend-main-content-heading']}>{cphTitleMain}</h1>
+          {children}
+        </div>
       </main>
 
       <footer className={styles['l-frontend-main-footer']}>
