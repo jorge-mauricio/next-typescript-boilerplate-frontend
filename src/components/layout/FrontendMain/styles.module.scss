@@ -1,0 +1,29 @@
+.l-frontend-main {
+  @apply min-h-screen flex flex-col;
+
+  &-header {
+    @apply w-full bg-gray-300 px-8 py-6;
+  }
+
+  &-content {
+    @apply flex-grow bg-gray-100 px-8 py-6;
+  }
+
+  &-footer {
+    @apply w-full bg-black mt-auto;
+  }
+
+  &-nav {
+    &-list {
+      @apply flex flex-row justify-center gap-x-4;
+    }
+
+    &-item {
+      @apply min-w-28;
+    }
+
+    &-link {
+      @apply block bg-black text-white text-center hover:bg-orange-600 w-full py-2 rounded-3xl;
+    }
+  }
+}
