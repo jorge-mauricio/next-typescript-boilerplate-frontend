@@ -23,7 +23,7 @@ const FrontendMain = ({ cphTitleMain, children }: FrontendMainProps): JSX.Elemen
     <>
       <Head>
         {/*
-        NOTE: prototype shortcut - ideally, I would create a different prop for this,
+        NOTE: Prototype shortcut - ideally, I would create a different prop for this,
         as the documents title can be different from the layout title.
         */}
         <title>
@@ -55,10 +55,8 @@ const FrontendMain = ({ cphTitleMain, children }: FrontendMainProps): JSX.Elemen
       </header>
 
       <main className={styles['l-frontend-main-content']}>
-        <div className="max-w-[64rem] m-auto">
-          <h1 className={styles['l-frontend-main-content-heading']}>{cphTitleMain}</h1>
-          {children}
-        </div>
+        <h1 className={styles['l-frontend-main-content-heading']}>{cphTitleMain}</h1>
+        {children}
       </main>
 
       <footer className={styles['l-frontend-main-footer']}>

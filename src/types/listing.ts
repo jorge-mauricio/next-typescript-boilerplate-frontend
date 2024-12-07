@@ -18,8 +18,19 @@ export interface Listing {
 }
 
 /**
- *
+ * FilterValues interface
  */
-export interface ListingsProps {
-  listings: Listing[];
+export interface FilterValues {
+  bedrooms: string;
+  bathrooms: string;
+  parking: string;
+  priceRange: number;
+}
+
+/**
+ * PriceRange interface
+ */
+export interface PriceRange {
+  min: number;
+  max: number;
 }

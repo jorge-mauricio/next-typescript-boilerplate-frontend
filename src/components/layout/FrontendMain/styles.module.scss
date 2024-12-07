@@ -12,7 +12,7 @@
 
   &-content {
     @include responsive-padding-x;
-    @apply flex-grow bg-gray-100 py-4;
+    @apply flex-grow w-full max-w-[64rem] m-auto py-4;
 
     &-heading {
       @apply font-bold text-center text-2xl text-orange-600 mb-4;
