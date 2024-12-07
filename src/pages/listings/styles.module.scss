@@ -1,3 +1,7 @@
 .listings-content {
   @apply flex flex-wrap justify-between gap-6;
 }
+
+.listings-no-results {
+  @apply w-full text-center;
+}
