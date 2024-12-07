@@ -1,6 +1,7 @@
-// import { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { useLayoutParentConfig } from '@/hooks/useLayoutParentConfig';
 
 import styles from './styles.module.scss';
 import { FrontendMainProps } from './types';
@@ -14,11 +15,14 @@ import { FrontendMainProps } from './types';
  * @returns {JSX.Element} The rendered FrontendMain component
  */
 const FrontendMain = ({ cphTitleMain, children }: FrontendMainProps): JSX.Element => {
+  // Custom hook to dynamically apply layout classes to the parent DOM elements.
+  useLayoutParentConfig('full-flex-height');
+
   return (
-    <div className={styles['l-frontend-main']}>
+    <>
       <header className={styles['l-frontend-main-header']}>
         <Image
-          className="mx-auto"
+          className="mx-auto min-w-64"
           src="/files/layout/frontend-layout-logo.png" // Path relative to public directory
           alt="Logo"
           width={320}
@@ -41,15 +45,20 @@ const FrontendMain = ({ cphTitleMain, children }: FrontendMainProps): JSX.Elemen
       </header>
 
       <main className={styles['l-frontend-main-content']}>
-        <h1>{cphTitleMain}</h1>
+        <h1 className={styles['l-frontend-main-content-heading']}>{cphTitleMain}</h1>
         {children}
       </main>
 
       <footer className={styles['l-frontend-main-footer']}>
-        {/* Your footer content */}
-        <p>Footer content</p>
+        Copyright © 2024 Full Stack Web Designer - JM. All rights reserved.
+        <address>
+          {'e-mail: '}
+          <Link href="mailto:contact@fullstackwebdesigner.com" className="hover:text-orange-600">
+            contact@fullstackwebdesigner.com
+          </Link>
+        </address>
       </footer>
-    </div>
+    </>
   );
 };
 
