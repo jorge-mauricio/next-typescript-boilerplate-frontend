@@ -1,9 +1,12 @@
+/**
+ * Listing interface
+ */
 export interface Listing {
   Id: number;
   DateListed: string;
   Title: string;
   Description: string;
-  SalePrice: number;
+  'Sale Price': number; // NOTE: Prototyping shortcut - I noticed that in the original data, the key was set as "Sale Price". I could have built the interface to match it, like 'Sale Price', but instead, I just changed the
   ThumbnailURL: string;
   PictureURL: string;
   Location: string;
@@ -14,6 +17,9 @@ export interface Listing {
   YearBuilt: number;
 }
 
+/**
+ *
+ */
 export interface ListingsProps {
   listings: Listing[];
 }
