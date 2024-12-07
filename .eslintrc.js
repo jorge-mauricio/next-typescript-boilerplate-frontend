@@ -2,7 +2,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['./tsconfig.json'], // Notice the array syntax
-    tsconfigRootDir: __dirname,   // Add this line
+    tsconfigRootDir: __dirname, // Add this line
     ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
@@ -16,14 +16,9 @@ module.exports = {
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:prettier/recommended'  // Prettier must be last to override other configs
+    'plugin:prettier/recommended', // Prettier must be last to override other configs
   ],
-  plugins: [
-    '@typescript-eslint',
-    'react',
-    'prettier',
-    'import'
-  ],
+  plugins: ['@typescript-eslint', 'react', 'prettier', 'import'],
   rules: {
     // Disable the problematic rules
     '@typescript-eslint/lines-between-class-members': 'off',
@@ -36,10 +31,13 @@ module.exports = {
 
     // TypeScript specific rules
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', {
-      argsIgnorePattern: '^_',
-      varsIgnorePattern: '^_'
-    }],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+      },
+    ],
 
     // Project preferences
     'import/prefer-default-export': 'off',
@@ -53,26 +51,26 @@ module.exports = {
           ['parent', 'sibling'],
           'index',
           'object',
-          'type'
+          'type',
         ],
         'newlines-between': 'always',
         alphabetize: {
           order: 'asc',
-          caseInsensitive: true
-        }
-      }
+          caseInsensitive: true,
+        },
+      },
     ],
 
     'prettier/prettier': [
       'error',
       {
-        "printWidth": 100,
-        "jsxBracketSameLine": false,
+        printWidth: 100,
+        jsxBracketSameLine: false,
 
-        'htmlWhitespaceSensitivity': 'css',
-        'proseWrap': 'preserve'
+        htmlWhitespaceSensitivity: 'css',
+        proseWrap: 'preserve',
       },
-      { usePrettierrc: true }
+      { usePrettierrc: true },
     ],
     'no-console': ['warn', { allow: ['warn', 'error'] }],
 
@@ -80,23 +78,20 @@ module.exports = {
       'error',
       {
         namedComponents: 'arrow-function',
-        unnamedComponents: 'arrow-function'
-      }
+        unnamedComponents: 'arrow-function',
+      },
     ],
-    'react/jsx-filename-extension': [
-      'error',
-      { extensions: ['.tsx'] }
-    ]
+    'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
   },
   settings: {
     'import/resolver': {
       typescript: {
-        alwaysTryTypes: true
-      }
+        alwaysTryTypes: true,
+      },
     },
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   // Ignore the following files (parse as js)
   ignorePatterns: [
@@ -106,6 +101,6 @@ module.exports = {
     'tailwind.config.js',
     'node_modules',
     '.next',
-    'out'
-  ]
+    'out',
+  ],
 };
