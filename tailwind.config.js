@@ -5,8 +5,20 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/app/**/*.{js,ts,jsx,tsx}',
   ],
+  safelist: [
+    // LayoutMain injected styles into parent elements.
+    'h-full',
+    'min-h-screen',
+    'flex',
+    'flex-col',
+    'flex-1'
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Lato', 'system-ui', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };
