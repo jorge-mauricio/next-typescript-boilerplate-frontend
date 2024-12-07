@@ -1,0 +1,40 @@
+@mixin responsive-padding-x {
+  @apply px-4 sm:px-8;
+}
+
+.l-frontend-main {
+  @apply min-h-screen flex flex-col;
+
+  &-header {
+    @include responsive-padding-x;
+    @apply flex flex-col flex-wrap items-center content-center w-full bg-gray-300 px-4 sm:px-8 py-4 sm:py-6;
+  }
+
+  &-content {
+    @include responsive-padding-x;
+    @apply flex-grow bg-gray-100 py-4;
+
+    &-heading {
+      @apply font-bold text-center text-2xl text-orange-600 mb-4;
+    }
+  }
+
+  &-footer {
+    @include responsive-padding-x;
+    @apply w-full text-center text-white bg-black mt-auto py-8;
+  }
+
+  &-nav {
+    &-list {
+      @apply flex flex-col sm:flex-row justify-center gap-x-4 gap-y-2;
+    }
+
+    &-item {
+      @apply min-w-28;
+    }
+
+    &-link {
+      @apply block bg-black text-white text-center hover:bg-orange-600 w-full py-2 rounded-3xl;
+    }
+  }
+}

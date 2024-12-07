@@ -1,8 +1,7 @@
 {
-  "name": "syncsystem-multiplatform-v2-react-next-ts",
+  "name": "react-frontend-assessment",
   "version": "0.0.1",
-  "description": "React Next TypeScript",
-  "main": "index.js",
+  "description": "Software Mind - React frontend assessment.",
   "scripts": {
     "dev": "concurrently -k -s first \"npm run mock-api\" \"wait-on http://localhost:3001 && npm run next:dev\"",
     "next:dev": "next dev",
@@ -20,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jorge-mauricio/syncsystem-multiplatform-v2.git"
+    "url": "git+https://git.number8.com/jorge.silva/react-frontend-assessment"
   },
   "author": "Jorge Mauricio - Full Stack Web Developer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jorge-mauricio/syncsystem-multiplatform-v2/issues"
+    "url": "https://git.number8.com/jorge.silva/react-frontend-assessment"
   },
-  "homepage": "https://github.com/jorge-mauricio/syncsystem-multiplatform-v2#readme",
+  "homepage": "https://git.number8.com/jorge.silva/react-frontend-assessment#readme",
   "dependencies": {
     "next": "^15.0.3",
     "react": "^18.3.1",

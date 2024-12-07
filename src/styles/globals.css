@@ -11,3 +11,22 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
 }
+
+/**
+  * Full flex height layout to be used through the `useLayoutParentConfig` hook.
+  *
+  * This layout is useful when you want to create a full-height layout that
+  * fills the entire viewport. It's especially useful when you want to create
+  * a layout that has a sticky footer.
+  */
+html[data-layout="full-flex-height"] {
+  @apply h-full;
+}
+
+body[data-layout="full-flex-height"] {
+  @apply min-h-screen flex flex-col;
+}
+
+#__next[data-layout="full-flex-height"] {
+  @apply flex flex-col flex-1;
+}
