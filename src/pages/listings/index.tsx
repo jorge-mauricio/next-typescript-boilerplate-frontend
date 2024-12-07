@@ -1,4 +1,6 @@
-import styles from './styles.module.scss';
+import FrontendMain from '@/components/layout/FrontendMain';
+
+// import styles from './styles.module.scss';
 
 import type { NextPage } from 'next';
 
@@ -16,16 +18,19 @@ interface ListingsProps {
 }
 
 const Listings: NextPage<ListingsProps> = ({ listings }) => {
-
+  // Debug.
+  console.log('listings=', listings); // prints in the browser
   return (
-    console.log('listings=', listings), // prints in the browser
-    <div className={styles['l-listings-container']}>
-      <main className={styles['listings-content']}>
-        <div className={styles['listings-content-header']}>
-          <h1>Property Listings</h1>
-        </div>
-      </main>
-    </div>
+    <FrontendMain cphTitleMain="Listings">
+      {/* <div className={styles['l-listings-container']}>
+        <main className={styles['listings-content']}>
+          <div className={styles['listings-content-header']}>
+            <h1>Property Listings</h1>
+          </div>
+        </main>
+      </div> */}
+      Listing content
+    </FrontendMain>
   );
 };
 
