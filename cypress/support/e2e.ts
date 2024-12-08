@@ -13,9 +13,4 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 import 'cypress-axe';
-import '@axe-core/cypress/dist/commands';
-// Import commands.js using ES2015 syntax:
 import './commands';
-
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
