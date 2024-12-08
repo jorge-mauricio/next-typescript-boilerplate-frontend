@@ -9,7 +9,8 @@
 ## Development
 
 ### Tech Stack Overview
-In order to carry out the React assessment, I selected Next.js framework, since I have always valued server side rendering, and it also saves some time with the automatic routing, since we were in a tight deadline. 
+In order to carry out the React assessment, I selected Next.js framework, since I have always valued server side rendering, and it also saves some time with the automatic routing, since we were in a tight deadline.
+I also opted to use TypeScript, since it's high in demand and I've been coding with it for the past year.
 For CSS styling, I used Tailwind CSS, configured with SCSS and set up as a styled module. To serve the provided dataset, I chose json-server for its simplicity, avoiding the complexity of a full setup with MSW. To streamline running both servers with a single command, I utilized `concurrently` in combination with `wait-on`.
 
 ### Main design patterns used:
