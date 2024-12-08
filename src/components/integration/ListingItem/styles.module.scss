@@ -1,5 +1,5 @@
 .listing-item {
-  @apply grid grid-rows-[auto_1fr]  min-w-[14.375rem] max-w-[14.375rem] border border-gray-300 text-gray-700 bg-white rounded-lg overflow-hidden pb-2 mx-auto sm:mx-0;
+  @apply grid grid-rows-[auto_1fr]  min-w-[13rem] max-w-[13rem] border border-gray-300 text-gray-700 bg-white rounded-lg overflow-hidden pb-2 mx-auto sm:mx-0;
 
   &-image {
     @apply object-cover;
@@ -9,8 +9,7 @@
     @apply font-semibold text-lg text-black px-2 mb-2;
   }
 
-  &-content {
+  &-feature {
     @apply px-2 mt-auto;
   }
-
 }

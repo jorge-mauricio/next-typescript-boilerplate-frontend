@@ -29,11 +29,11 @@ const ListingItem = ({ listing }: ListingCardProps): JSX.Element => {
         alt={listing.Title}
       />
       <h2 className={styles['listing-item-title']}>{toTitleCase(listing.Title)}</h2>
-      <p className={styles['listing-item-content']}>{listing.Location}</p>
-      <p className={`${styles['listing-item-content']} text-sm`}>
+      <p className={styles['listing-item-feature']}>{listing.Location}</p>
+      <p className={`${styles['listing-item-feature']} text-sm`}>
         {listing.Bedrooms} beds | {listing.Bathrooms} baths
       </p>
-      <p className={`${styles['listing-item-content']} font-bold text-lg mb-2`}>
+      <p className={`${styles['listing-item-feature']} font-bold text-lg mb-2`}>
         {formatCurrency(listing['Sale Price'])}
       </p>
       <Link
