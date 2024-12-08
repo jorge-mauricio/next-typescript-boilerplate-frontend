@@ -1,6 +1,8 @@
 ### E2E Testing
 
 #### Running Tests
+Make sure your development server is not running, as it uses the same port.
+NOTE: Prototype shortcut. Ideally, the tests would run in a different port so there wouldn't be the need for the developer to turn down it's dev environment.
 
 ```bash
 # Open Cypress UI
