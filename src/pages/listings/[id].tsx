@@ -1,8 +1,8 @@
-// src/pages/listings/[id].tsx
 import { GetServerSideProps, NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import SavePropertyButton from '@/components/atom/SavePropertyButton';
 import ContactForm from '@/components/integration/ContactForm';
 import FrontendMain from '@/components/layout/FrontendMain';
 import { API_CONFIG } from '@/config';
@@ -80,6 +80,11 @@ const ListingDetails: NextPage<ListingDetailsProps> = ({
 
         {/* Sidebar */}
         <div className={styles['listing-details-sidebar']}>
+          <SavePropertyButton
+            id={listing.Id}
+            title={listing.Title}
+            pictureUrl={listing.PictureURL}
+          />
           <ContactForm title="Contact Agent" />
         </div>
       </div>

@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
+import SavedPropertiesModal from '@/components/integration/SavedPropertiesModal';
 import { useLayoutParentConfig } from '@/hooks/useLayoutParentConfig';
 
 import styles from './styles.module.scss';
@@ -18,6 +20,7 @@ import { FrontendMainProps } from './types';
 const FrontendMain = ({ cphTitleMain, children }: FrontendMainProps): JSX.Element => {
   // Custom hook to dynamically apply layout classes to the parent DOM elements.
   useLayoutParentConfig('full-flex-height');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
@@ -50,6 +53,15 @@ const FrontendMain = ({ cphTitleMain, children }: FrontendMainProps): JSX.Elemen
                 Listings
               </Link>
             </li>
+            <li className={styles['l-frontend-main-nav-item']}>
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
+                className={styles['l-frontend-main-nav-link']}
+              >
+                Favorites
+              </button>
+            </li>
           </ul>
         </nav>
       </header>
@@ -63,11 +75,15 @@ const FrontendMain = ({ cphTitleMain, children }: FrontendMainProps): JSX.Elemen
         Copyright © 2024 Full Stack Web Designer - JM. All rights reserved.
         <address>
           {'e-mail: '}
-          <Link href="mailto:contact@fullstackwebdesigner.com" className="hover:text-orange-600">
+          <Link
+            href="mailto:contact@fullstackwebdesigner.com"
+            className="hover:text-orange-600 break-words"
+          >
             contact@fullstackwebdesigner.com
           </Link>
         </address>
       </footer>
+      {isModalOpen && <SavedPropertiesModal onClose={() => setIsModalOpen(false)} />}
     </>
   );
 };
