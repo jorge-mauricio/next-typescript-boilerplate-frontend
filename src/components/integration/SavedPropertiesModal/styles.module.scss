@@ -1,0 +1,31 @@
+.overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4;
+}
+
+.modal {
+  @apply bg-white rounded-lg max-w-3xl w-full mx-4 p-6 flex flex-col;
+
+  &-title {
+    @apply text-2xl font-bold mb-4;
+  }
+
+  &-content {
+    @apply space-y-4 mb-6;
+  }
+
+  &-close {
+    @apply mt-auto px-4 py-2 bg-sky-400 text-black rounded-md hover:bg-orange-600 transition-colors;
+  }
+}
+
+.property-item {
+  @apply flex items-center gap-4 p-2 hover:bg-gray-50 rounded-lg transition-colors;
+}
+
+.property-image {
+  @apply h-16 w-24 object-cover rounded;
+}
+
+.property-title {
+  @apply font-medium hover:text-orange-600;
+}
