@@ -33,7 +33,7 @@ const Home: NextPage = (): JSX.Element => {
         <a
           href="https://git.number8.com/jorge.silva/react-frontend-assessment#readme"
           target="_blank"
-          className="text-orange-600 hover:text-black"
+          className="text-orange-700 hover:text-black"
         >
           https://git.number8.com/jorge.silva/react-frontend-assessment#readme
         </a>
