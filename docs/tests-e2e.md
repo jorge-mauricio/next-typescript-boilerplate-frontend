@@ -1,14 +1,13 @@
 ### E2E Testing
 
 #### Running Tests
-Make sure your development server is not running, as it uses the same port.
-NOTE: Prototype shortcut. Ideally, the tests would run in a different port so there wouldn't be the need for the developer to turn down it's dev environment.
 
 **Recommended:**
 ```bash
 # Run with dev server / headless
 npm run test:e2e:headless
 ```
+Note: If the test doesn't run, turn down the dev server.
 
 **Further test commands:**
 ```bash
