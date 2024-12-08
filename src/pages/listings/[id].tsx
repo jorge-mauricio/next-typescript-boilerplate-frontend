@@ -3,6 +3,7 @@ import { GetServerSideProps, NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import ContactForm from '@/components/integration/ContactForm';
 import FrontendMain from '@/components/layout/FrontendMain';
 import { API_CONFIG } from '@/config';
 import { formatDate, formatCurrency } from '@/lib/helpers/formatters';
@@ -79,7 +80,7 @@ const ListingDetails: NextPage<ListingDetailsProps> = ({
 
         {/* Sidebar */}
         <div className={styles['listing-details-sidebar']}>
-          <h3 className={styles['listing-details-sidebar-title']}>Contact Agent</h3>
+          <ContactForm title="Contact Agent" />
         </div>
       </div>
       <Link href="/listings" className={styles['listing-details-back-button']}>
