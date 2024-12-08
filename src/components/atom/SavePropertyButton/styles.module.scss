@@ -1,0 +1,7 @@
+.save-property-button {
+  @apply flex items-center justify-center gap-2 w-full px-4 py-2 bg-sky-400 text-black rounded-md hover:bg-orange-600 transition-colors mb-11;
+}
+
+.save-property-icon {
+  @apply w-5 h-5;
+}
