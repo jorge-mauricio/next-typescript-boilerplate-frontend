@@ -4,6 +4,13 @@
 Make sure your development server is not running, as it uses the same port.
 NOTE: Prototype shortcut. Ideally, the tests would run in a different port so there wouldn't be the need for the developer to turn down it's dev environment.
 
+**Recommended:**
+```bash
+# Run with dev server / headless
+npm run test:e2e:headless
+```
+
+**Further test commands:**
 ```bash
 # Open Cypress UI
 npm run cypress
