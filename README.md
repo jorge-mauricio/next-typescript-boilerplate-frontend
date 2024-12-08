@@ -1,7 +1,9 @@
 # Software Mind - Assessment Project
 
 ## Install and Run
-**IMPORTANT:** use the `--legacy-peer-deps` flag, as while I was developing, I hadn't realized that I was working on an outdate version of node/npm.
+- Node version validated: v18.18.1 / npm v9.8.1
+- Set compatible Node/NPM versions: `nvm use` 
+**IMPORTANT:** When restoring the packages, use the `--legacy-peer-deps` flag, as while I was developing, I hadn't realized that I was working on an outdate version of node/npm.
 - Install packages: `npm i --legacy-peer-deps`
 - Run Next server and Mock API (json-server) in parallel: `npm run dev`
 - Have fun!
