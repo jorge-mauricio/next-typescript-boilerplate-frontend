@@ -1,0 +1,170 @@
+### CSS Naming Convention
+
+This project uses CSS Modules with Kebab Case naming convention for better readability and maintainability.
+
+#### Basic Naming Pattern
+- Use all lowercase
+- Words separated by single hyphens
+- Component name as prefix
+- Descriptive suffixes for elements
+
+```scss
+// styles.module.scss
+.listing-card { }
+.listing-card-image { }
+.listing-card-title { }
+```
+
+```tsx
+import styles from './styles.module.scss';
+
+const ListingCard = () => (
+  <div className={styles['listing-card']}>
+    <img className={styles['listing-card-image']} />
+    <h2 className={styles['listing-card-title']}>Title</h2>
+  </div>
+);
+```
+
+#### State Classes
+States are prefixed with `is-` or `has-`:
+```scss
+.listing-card {
+  &.is-active { }
+  &.is-disabled { }
+  &.has-error { }
+}
+
+// Usage with conditional classes
+.listing-card-input {
+  &.has-error {
+    @apply border-red-500;
+  }
+}
+```
+
+```tsx
+import cn from 'classnames';
+
+const ListingCard = ({ isActive, hasError }) => (
+  <div className={cn(
+    styles['listing-card'],
+    isActive && styles['is-active'],
+    hasError && styles['has-error']
+  )}>
+);
+```
+
+#### Variants
+Variants use descriptive suffixes:
+```scss
+.button-primary { }
+.button-secondary { }
+.listing-card-compact { }
+.listing-card-expanded { }
+```
+
+#### Layout Classes
+Prefix with `l-` for layout-specific styles:
+```scss
+.l-listing-grid { }
+.l-sidebar { }
+.l-main-content { }
+```
+
+#### Examples
+
+```scss
+// listings/styles.module.scss
+.listing-card {
+  @apply bg-white rounded-lg shadow-md;
+
+  &.is-featured {
+    @apply border-2 border-blue-500;
+  }
+
+  &.is-sold {
+    @apply opacity-75;
+  }
+}
+
+.listing-card-image {
+  @apply w-full h-48 object-cover;
+
+  &.has-error {
+    @apply border-red-500;
+  }
+}
+
+.listing-card-content {
+  @apply p-4;
+}
+
+.l-listing-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+```
+
+#### Best Practices
+
+1. **Component Prefixing**
+   - Always prefix classes with component name
+   - Helps maintain scope and prevents conflicts
+   ```scss
+   .listing-card { }        // ✓ Good
+   .card { }                // ✗ Bad (too generic)
+   ```
+
+2. **State Naming**
+   - Use `is-*` for states
+   - Use `has-*` for containment
+   ```scss
+   .is-active { }          // ✓ Good
+   .active { }             // ✗ Bad
+   ```
+
+3. **Nesting**
+   - Limit nesting to 3 levels max
+   - Use parent selector `&` for states
+   ```scss
+   .listing-card {
+     &.is-featured { }     // ✓ Good
+     .deep .nesting { }    // ✗ Bad
+   }
+   ```
+
+4. **Media Queries**
+   - Use Tailwind breakpoints when possible
+   - Keep responsive styles with their base styles
+   ```scss
+   .listing-card {
+     @apply p-4;
+     @screen md {
+       @apply p-6;
+     }
+   }
+   ```
+
+#### Common Patterns
+
+```scss
+// Component base
+.listing-card { }
+
+// Component elements
+.listing-card-image { }
+.listing-card-title { }
+
+// States
+.is-active { }
+.is-disabled { }
+.has-error { }
+
+// Variants
+.listing-card-compact { }
+.listing-card-expanded { }
+
+// Layout
+.l-listing-grid { }
+.l-listing-sidebar { }
+```
