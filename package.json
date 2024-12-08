@@ -1,6 +1,10 @@
 {
   "name": "react-frontend-assessment",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=18.18.1",
+    "npm": ">=9.8.1"
+  },
   "description": "Software Mind - React frontend assessment.",
   "scripts": {
     "dev": "concurrently -k -s first \"npm run mock-api\" \"wait-on http://localhost:3001 && npm run next:dev\"",
@@ -15,7 +19,11 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "format:file": "prettier --write",
     "lint:format": "npm run lint:fix && npm run format",
-    "lint:format:file": "npm run lint:file && npm run format:file"
+    "lint:format:file": "npm run lint:file && npm run format:file",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run",
+    "test:e2e": "start-server-and-test dev http://localhost:3000 cypress",
+    "test:e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
   },
   "repository": {
     "type": "git",
@@ -42,7 +50,10 @@
     "@typescript-eslint/eslint-plugin": "^8.17.0",
     "@typescript-eslint/parser": "^8.17.0",
     "autoprefixer": "^10.4.20",
+    "axe-core": "^4.10.2",
     "concurrently": "^9.1.0",
+    "cypress": "^13.16.1",
+    "cypress-axe": "^1.5.0",
     "eslint": "^8.57.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
