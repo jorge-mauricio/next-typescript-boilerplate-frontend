@@ -34,9 +34,9 @@ For CSS styling, I used Tailwind CSS, configured with SCSS and set up as a style
 Below, I've listed a deeper context of patterns and standards that I defined for this assessment.
 
 ### Table of Contents
-- [Development Server](/jorge.silva/react-frontend-assessment/src/branch/main/docs/development-environment.md)
-- [CSS Architecture](/jorge.silva/react-frontend-assessment/src/branch/main/docs/css-architecture.md)
-- [CSS Naming Convention](/jorge.silva/react-frontend-assessment/src/branch/main/docs/css-naming-convention)
-- [CSS Performance Guidelines](/jorge.silva/react-frontend-assessment/src/branch/main/docs/css-performance-guidelines.md)
-- [Linting and Code Style Guide](/jorge.silva/react-frontend-assessment/src/branch/main/docs/linting-and-code-style-guide.md)
-- [E2E Testing](/jorge.silva/react-frontend-assessment/src/branch/main/docs/tests-e2e.md)  
+- [Development Server](/docs/development-environment.md)
+- [CSS Architecture](/docs/css-architecture.md)
+- [CSS Naming Convention](/docs/css-naming-convention)
+- [CSS Performance Guidelines](/docs/css-performance-guidelines.md)
+- [Linting and Code Style Guide](/docs/linting-and-code-style-guide.md)
+- [E2E Testing](/docs/tests-e2e.md)  
