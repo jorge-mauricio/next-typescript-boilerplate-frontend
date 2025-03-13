@@ -8,7 +8,7 @@ const Document = () => {
           NOTE: Prototype shortcut - there are tons of tags we should include in the head, especially og: tags.
           Ideally, they would be set dynamically based on the page content, in the page component.
         */}
-        <meta name="description" content="Software Mind assessment task." />
+        <meta name="description" content="Description example." />
         <link rel="icon" href="/favicon.ico" />
         <meta lang="en" />
       </Head>

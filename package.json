@@ -1,11 +1,11 @@
 {
-  "name": "react-frontend-assessment",
+  "name": "next-typescript-boilerplate-frontend",
   "version": "0.0.1",
   "engines": {
     "node": ">=18.18.1",
     "npm": ">=9.8.1"
   },
-  "description": "Software Mind - React frontend assessment.",
+  "description": "NextJS / TypeScript boiler plate.",
   "scripts": {
     "dev": "concurrently -k -s first \"npm run mock-api\" \"wait-on http://localhost:3001 && npm run next:dev\"",
     "next:dev": "next dev",
@@ -27,14 +27,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git.number8.com/jorge.silva/react-frontend-assessment"
+    "url": "git+https://github.com/jorge-mauricio/next-typescript-boilerplate-frontend.git"
   },
   "author": "Jorge Mauricio - Full Stack Web Developer",
   "license": "ISC",
   "bugs": {
-    "url": "https://git.number8.com/jorge.silva/react-frontend-assessment"
+    "url": "https://github.com/jorge-mauricio/next-typescript-boilerplate-frontend.git"
   },
-  "homepage": "https://git.number8.com/jorge.silva/react-frontend-assessment#readme",
+  "homepage": "https://github.com/jorge-mauricio/next-typescript-boilerplate-frontend.git#readme",
   "dependencies": {
     "@reduxjs/toolkit": "^2.4.0",
     "lucide-react": "^0.468.0",

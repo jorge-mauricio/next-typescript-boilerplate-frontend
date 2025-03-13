@@ -11,11 +11,11 @@ const Home: NextPage = (): JSX.Element => {
   return (
     <FrontendMain cphTitleMain="Home">
       <p className="leading-relaxed">
-        Assessment project for Software Mind.
+        NextJS / TypeScript boiler plate.
         <br />
         <strong>Tech Stack Overview</strong>
         <br />
-        In order to carry out the React assessment, I selected Next.js framework, since I have
+        I selected Next.js framework, since I have
         always valued server side rendering, and it also saves some time with the automatic routing,
         since we were in a tight deadline.
         <br />

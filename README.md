@@ -1,4 +1,4 @@
-# Software Mind - Assessment Project
+# NextJS / TypeScript Boilerplate - Frontend
 
 ## Install and Run
 - Node version validated: v18.18.1 / npm v9.8.1
